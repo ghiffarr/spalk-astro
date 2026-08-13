@@ -1,0 +1,21 @@
+---
+import manifest from "../content/pages/manifest.json";
+import WebflowPage from "../components/webflow/WebflowPage.astro";
+
+export function getStaticPaths() {
+	return manifest.pages
+		.filter(({ route }) => route && route !== "404")
+		.map(({ route, page }) => ({
+			params: { slug: route },
+			props: { page },
+		}));
+}
+
+interface Props {
+	page: string;
+}
+
+const { page } = Astro.props;
+---
+
+<WebflowPage page={page} />

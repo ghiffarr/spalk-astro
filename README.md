@@ -1,43 +1,75 @@
-# Astro Starter Kit: Minimal
+# Spalk Astro
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Faithful Astro reconstruction of [spalk.tv](https://www.spalk.tv/), based on
+the asset-complete [`ghiffarr/Spalk-v0`](https://github.com/ghiffarr/Spalk-v0)
+Webflow export and verified against the production site.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The project follows the same preservation and editing structure as Max Space
+Astro: untouched source documents, numbered editable page fragments, a shared
+renderer, clean Astro routes, and local production assets.
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## Project structure
 
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+src/
+├── components/webflow/
+│   └── WebflowPage.astro          # shared fragment renderer
+├── content/pages/
+│   ├── home/                      # numbered homepage sections
+│   ├── solutions/                 # nested route directories
+│   └── ...
+├── pages/                         # Astro route entry points
+└── webflow-source/
+    ├── data/                      # preserved CSV/JSON exports
+    └── original-pages/            # preserved monolithic HTML snapshot
+
+public/assets/webflow/
+├── audio/
+├── documents/                     # original Rive files
+├── fonts/
+├── images/
+├── scripts/
+├── styles/
+└── videos/
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Edit the numbered files in `src/content/pages/<route>/`. Their numeric prefixes
+preserve document order. Shared rendering remains in
+`src/components/webflow/WebflowPage.astro`.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Development
 
-Any static assets, like images, can be placed in the `public/` directory.
+```sh
+npm install
+npx astro dev --background
+```
 
-## 🧞 Commands
+Manage the background server with:
 
-All commands are run from the root of the project, from a terminal:
+```sh
+npx astro dev status
+npx astro dev logs
+npx astro dev stop
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Verification
 
-## 👀 Want to learn more?
+```sh
+npm run audit:assets
+npm run build
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+`npm run build` generates the static site. `npm run check` is available for
+Astro diagnostics, but the preserved inline Webflow scripts make that diagnostic
+pass unusually memory-intensive; the asset audit and production build are the
+required compatibility checks for this source-preserving reconstruction.
+
+## Rebuilding the editable source
+
+```sh
+npm run organize:webflow -- --force
+npm run localize:webflow
+```
+
+The `--force` flag replaces every editable fragment with the preserved import,
+so use it only when you intentionally want to discard section-level edits.

@@ -1,0 +1,23 @@
+---
+interface Props {
+	page: string;
+}
+
+const { page } = Astro.props;
+const { readFile, readdir } = await import("node:fs/promises");
+const { resolve } = await import("node:path");
+const pageDirectory = resolve("src", "content", "pages", page);
+const fragmentNames = (await readdir(pageDirectory))
+	.filter((name) => name.endsWith(".html"))
+	.sort((left, right) => left.localeCompare(right));
+
+if (!fragmentNames.length) throw new Error(`Missing organized Webflow page: ${page}`);
+
+// The fragments are numbered in source order. Joining them reproduces the
+// complete export while keeping each page section independently editable.
+const document = (
+	await Promise.all(fragmentNames.map((name) => readFile(resolve(pageDirectory, name), "utf8")))
+).join("");
+---
+
+<Fragment set:html={document} />

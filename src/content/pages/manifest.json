@@ -1,0 +1,159 @@
+{
+  "generatedFrom": "src/webflow-source/original-pages",
+  "pages": [
+    {
+      "page": "unauthorized",
+      "route": "401",
+      "source": "401.html",
+      "sections": 0,
+      "fragments": 11
+    },
+    {
+      "page": "not-found",
+      "route": "404",
+      "source": "404.html",
+      "sections": 0,
+      "fragments": 11
+    },
+    {
+      "page": "about-us",
+      "route": "about-us",
+      "source": "about-us.html",
+      "sections": 7,
+      "fragments": 9
+    },
+    {
+      "page": "case-study/fiba",
+      "route": "case-study/fiba",
+      "source": "case-study/fiba/index.html",
+      "sections": 6,
+      "fragments": 8
+    },
+    {
+      "page": "case-study/infront",
+      "route": "case-study/infront",
+      "source": "case-study/infront/index.html",
+      "sections": 6,
+      "fragments": 8
+    },
+    {
+      "page": "case-study/sky-switzerland",
+      "route": "case-study/sky-switzerland",
+      "source": "case-study/sky-switzerland/index.html",
+      "sections": 6,
+      "fragments": 8
+    },
+    {
+      "page": "desktop-app",
+      "route": "desktop-app",
+      "source": "desktop-app.html",
+      "sections": 4,
+      "fragments": 6
+    },
+    {
+      "page": "detail-case-study-tags",
+      "route": "detail-case-study-tags",
+      "source": "detail_case-study-tags.html",
+      "sections": 0,
+      "fragments": 9
+    },
+    {
+      "page": "detail-case-study",
+      "route": "detail-case-study",
+      "source": "detail_case-study.html",
+      "sections": 6,
+      "fragments": 8
+    },
+    {
+      "page": "detail-for-commentators",
+      "route": "detail-for-commentators",
+      "source": "detail_for-commentators.html",
+      "sections": 8,
+      "fragments": 10
+    },
+    {
+      "page": "for-commentators",
+      "route": "for-commentators",
+      "source": "for-commentators.html",
+      "sections": 6,
+      "fragments": 8
+    },
+    {
+      "page": "home",
+      "route": "",
+      "source": "index.html",
+      "sections": 9,
+      "fragments": 11
+    },
+    {
+      "page": "industries/college-athletics",
+      "route": "industries/college-athletics",
+      "source": "industries/college-athletics.html",
+      "sections": 8,
+      "fragments": 10
+    },
+    {
+      "page": "privacy-policy",
+      "route": "privacy-policy",
+      "source": "privacy-policy.html",
+      "sections": 2,
+      "fragments": 4
+    },
+    {
+      "page": "schedule-a-demo",
+      "route": "schedule-a-demo",
+      "source": "schedule-a-demo.html",
+      "sections": 2,
+      "fragments": 4
+    },
+    {
+      "page": "solutions/ai-commentary",
+      "route": "solutions/ai-commentary",
+      "source": "solutions/ai-commentary.html",
+      "sections": 7,
+      "fragments": 9
+    },
+    {
+      "page": "solutions/broadcast-services",
+      "route": "solutions/broadcast-services",
+      "source": "solutions/broadcast-services.html",
+      "sections": 6,
+      "fragments": 8
+    },
+    {
+      "page": "solutions/remote-commentary-studio",
+      "route": "solutions/remote-commentary-studio",
+      "source": "solutions/remote-commentary-studio.html",
+      "sections": 7,
+      "fragments": 9
+    },
+    {
+      "page": "solutions/talent-marketplace",
+      "route": "solutions/talent-marketplace",
+      "source": "solutions/talent-marketplace.html",
+      "sections": 7,
+      "fragments": 9
+    },
+    {
+      "page": "style-guide",
+      "route": "style-guide",
+      "source": "style-guide.html",
+      "sections": 1,
+      "fragments": 3
+    },
+    {
+      "page": "technical-overview",
+      "route": "technical-overview",
+      "source": "technical-overview.html",
+      "sections": 2,
+      "fragments": 4
+    },
+    {
+      "page": "terms-and-conditions",
+      "route": "terms-and-conditions",
+      "source": "terms-and-conditions.html",
+      "sections": 2,
+      "fragments": 4
+    }
+  ]
+}
