@@ -8,6 +8,24 @@ The project follows the same preservation and editing structure as Max Space
 Astro: untouched source documents, numbered editable page fragments, a shared
 renderer, clean Astro routes, and local production assets.
 
+## Portfolio overview
+
+Website reconstruction completed as part of my web development work at **Dorxata**. The focus is migrating an existing Webflow site into Astro while preserving its design, content, assets, and responsive behavior.
+
+### My contribution
+
+I worked on the website rebuild and migration workflow: organizing the imported source, adapting it for Astro, reviewing responsive layouts and interactions, and resolving issues during QA. This is an AI-assisted development workflow. The original website design and brand assets belong to their respective owners; my contribution is the reconstruction and implementation work.
+
+### Technologies
+
+Astro · HTML · CSS · JavaScript · Node.js
+
+**Requirements:** Node.js 22.12.0 or later and npm.
+
+### Verification evidence
+
+See [design-qa.md](design-qa.md) for the repository's recorded desktop/mobile comparisons, interaction checks, build results, and limitations. Those records describe the earlier rebuild verification; they are not a new test run.
+
 ## Project structure
 
 ```text
@@ -73,3 +91,7 @@ npm run localize:webflow
 
 The `--force` flag replaces every editable fragment with the preserved import,
 so use it only when you intentionally want to discard section-level edits.
+
+---
+
+[More projects and my profile](https://github.com/ghiffarr)
